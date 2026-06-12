@@ -2,6 +2,17 @@ import streamlit as st
 
 st.set_page_config(page_title="Compras Mary", page_icon="🛍️", layout="wide")
 
+st.markdown("""
+    <style>
+    .stApp {
+        background-color: #fde2e7;
+    }
+    h1, h2, h3, p, span, label, .stMarkdown {
+        color: #8b3a52 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("🛍️ Compras Mary")
 st.markdown("Catálogo de productos")
 st.markdown("---")
@@ -16,10 +27,13 @@ productos = [
     {"nombre": "Chaqueta", "imagenes": ["imagenes/7.jpeg"]},
 ]
 
-for producto in productos:
-    st.subheader(producto["nombre"])
-    cols = st.columns(len(producto["imagenes"]))
-    for i, img in enumerate(producto["imagenes"]):
-        with cols[i]:
-            st.image(img, use_container_width=True)
-    st.markdown("---")
+cols_por_fila = 3
+
+for i in range(0, len(productos), cols_por_fila):
+    fila = productos[i:i + cols_por_fila]
+    cols = st.columns(cols_por_fila)
+    for col, producto in zip(cols, fila):
+        with col:
+            st.image(producto["imagenes"][0], use_container_width=True)
+            st.subheader(producto["nombre"])
+            st.markdown("---")
