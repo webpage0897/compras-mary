@@ -6,44 +6,20 @@ st.title("🛍️ Compras Mary")
 st.markdown("Catálogo de productos")
 st.markdown("---")
 
-# ============================================
-# AQUÍ AGREGAS TUS PRODUCTOS
-# Cada producto es un diccionario con:
-# - nombre
-# - descripcion
-# - categoria
-# - imagenes (lista de rutas)
-# ============================================
-
 productos = [
-    {
-        "nombre": "Polerón gris básico",
-        "descripcion": "Polerón con capucha, talla S a L, color gris.",
-        "categoria": "Polerones",
-        "imagenes": ["imagenes/poleron1_1.jpg", "imagenes/poleron1_2.jpg"]
-    },
-    {
-        "nombre": "Abrigo negro largo",
-        "descripcion": "Abrigo de invierno, talla M a XL, color negro.",
-        "categoria": "Abrigos",
-        "imagenes": ["imagenes/abrigo1_1.jpg"]
-    },
-    # 👆 Copia este formato para agregar más productos
+    {"nombre": "Casaca", "imagenes": ["imagenes/1.jpg"]},
+    {"nombre": "Abrigo", "imagenes": ["imagenes/2.jpg"]},
+    {"nombre": "Abrigo", "imagenes": ["imagenes/3.jpg"]},
+    {"nombre": "Polera", "imagenes": ["imagenes/4.jpg"]},
+    {"nombre": "Polera", "imagenes": ["imagenes/5.jpg"]},
+    {"nombre": "Casaca", "imagenes": ["imagenes/6.jpg"]},
+    {"nombre": "Chaqueta", "imagenes": ["imagenes/7.jpg"]},
 ]
-
-# ============================================
-# MOSTRAR PRODUCTOS
-# ============================================
 
 for producto in productos:
     st.subheader(producto["nombre"])
-    st.caption(f"Categoría: {producto['categoria']}")
-    st.write(producto["descripcion"])
-
-    # Mostrar galería de imágenes en columnas
     cols = st.columns(len(producto["imagenes"]))
     for i, img in enumerate(producto["imagenes"]):
         with cols[i]:
             st.image(img, use_container_width=True)
-
     st.markdown("---")
