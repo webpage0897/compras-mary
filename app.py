@@ -10,6 +10,12 @@ st.markdown("""
     h1, h2, h3, p, span, label, .stMarkdown {
         color: #8b3a52 !important;
     }
+    div[data-testid="stImage"] img {
+        height: 350px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 8px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
