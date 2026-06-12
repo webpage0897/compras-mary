@@ -7,13 +7,13 @@ st.markdown("Catálogo de productos")
 st.markdown("---")
 
 productos = [
-    {"nombre": "Casaca", "imagenes": ["imagenes/1.jpg"]},
-    {"nombre": "Abrigo", "imagenes": ["imagenes/2.jpg"]},
-    {"nombre": "Abrigo", "imagenes": ["imagenes/3.jpg"]},
-    {"nombre": "Polera", "imagenes": ["imagenes/4.jpg"]},
-    {"nombre": "Polera", "imagenes": ["imagenes/5.jpg"]},
-    {"nombre": "Casaca", "imagenes": ["imagenes/6.jpg"]},
-    {"nombre": "Chaqueta", "imagenes": ["imagenes/7.jpg"]},
+    {"nombre": "Casaca", "imagenes": ["imagenes/1.jpeg"]},
+    {"nombre": "Abrigo", "imagenes": ["imagenes/2.jpeg"]},
+    {"nombre": "Abrigo", "imagenes": ["imagenes/3.jpeg"]},
+    {"nombre": "Polera", "imagenes": ["imagenes/4.png"]},
+    {"nombre": "Polera", "imagenes": ["imagenes/5.png"]},
+    {"nombre": "Casaca", "imagenes": ["imagenes/6.jpeg"]},
+    {"nombre": "Chaqueta", "imagenes": ["imagenes/7.jpeg"]},
 ]
 
 for producto in productos:
