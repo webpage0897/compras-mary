@@ -20,7 +20,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("🛍️ Compras Mary")
-st.markdown("Catálogo de productos")
+st.markdown("Bienvenida/o al catálogo oficial de **Compras Mary** 🌸. Aquí encontrarás nuestra selección de prendas: casacas, abrigos, poleras, chaquetas y mucho más, pensadas para acompañarte en cada estación del año. ¡Explora y enamórate de tu próximo outfit!")
 st.markdown("---")
 
 productos = [
