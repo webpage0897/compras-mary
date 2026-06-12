@@ -1,21 +1,27 @@
-import streamlit as st
+import base64
 
-st.set_page_config(page_title="Compras Mary", page_icon="🛍️", layout="wide")
+def get_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
-st.markdown("""
+fondo = get_base64("imagenes/fondo.jpg")
+
+st.markdown(f"""
     <style>
-    .stApp {
-        background-color: #fde2e7;
-    }
-    h1, h2, h3, p, span, label, .stMarkdown {
+    .stApp {{
+        background-image: url("data:image/jpeg;base64,{fondo}");
+        background-size: cover;
+        background-attachment: fixed;
+    }}
+    h1, h2, h3, p, span, label, .stMarkdown {{
         color: #8b3a52 !important;
-    }
-    div[data-testid="stImage"] img {
+    }}
+    div[data-testid="stImage"] img {{
         height: 350px;
         object-fit: cover;
         width: 100%;
         border-radius: 8px;
-    }
+    }}
     </style>
 """, unsafe_allow_html=True)
 
