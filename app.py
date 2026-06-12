@@ -1,4 +1,5 @@
 import base64
+import streamlit as st
 
 def get_base64(path):
     with open(path, "rb") as f:
@@ -6,6 +7,7 @@ def get_base64(path):
 
 fondo = get_base64("imagenes/fondo.jpg")
 
+st.set_page_config(page_title="Compras Mary", page_icon="🛍️", layout="wide")
 st.markdown(f"""
     <style>
     .stApp {{
